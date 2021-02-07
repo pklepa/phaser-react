@@ -29,13 +29,12 @@ function Header() {
   return (
     <AppBar className={classes.appbar}>
       <h1 className={classes.title}>
-        My
+        My application for
         <img
           className={classes.logo}
           src={process.env.PUBLIC_URL + '/images/adeptly.png'}
           alt="Adeptly"
         />
-        Application
       </h1>
     </AppBar>
   );

@@ -2,6 +2,10 @@ import React from 'react';
 import { CssBaseline, makeStyles } from '@material-ui/core';
 import Header from './components/Header';
 
+import { Provider } from 'mobx-react';
+import { GameStore } from './components/game/gameStore';
+import ScoreBoard from './components/ScoreBoard';
+
 const useStyles = makeStyles({
   root: {
     display: 'flex',
@@ -11,6 +15,7 @@ const useStyles = makeStyles({
     backgroundColor: '#202430',
     color: 'whitesmoke',
 
+    paddingTop: '100px',
     minHeight: '100vh',
     width: '100%',
   },
@@ -25,6 +30,8 @@ function App() {
 
       <div className={classes.root}>
         <Header />
+
+        <ScoreBoard store={GameStore} />
       </div>
     </>
   );
